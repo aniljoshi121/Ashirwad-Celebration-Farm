@@ -11,8 +11,25 @@ const links = [
   { href: "#enquiry", label: "Contact" },
 ];
 
+// Mobile menu closing (height animating to 0) was racing against the
+// browser's native #anchor jump, so the page scrolled to the wrong spot
+// or not at all. Fix: intercept the click, close the menu first, then
+// scroll to the target manually once the collapse animation is done.
+const MENU_CLOSE_MS = 320;
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
+
+  function handleMobileLinkClick(e, href) {
+    e.preventDefault();
+    setOpen(false);
+    window.setTimeout(() => {
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, MENU_CLOSE_MS);
+  }
 
   return (
     <motion.header
@@ -66,7 +83,11 @@ export default function Nav() {
           >
             <nav className="nav-mobile-links">
               {links.map((l) => (
-                <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={(e) => handleMobileLinkClick(e, l.href)}
+                >
                   {l.label}
                 </a>
               ))}
@@ -76,7 +97,7 @@ export default function Nav() {
               variant="gold"
               size="sm"
               className="nav-mobile-cta"
-              onClick={() => setOpen(false)}
+              onClick={(e) => handleMobileLinkClick(e, "#enquiry")}
             >
               Book Your Date
             </Button>

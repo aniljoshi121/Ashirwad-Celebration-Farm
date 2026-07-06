@@ -2,6 +2,15 @@
   overflow-x: hidden;
 }
 
+#top,
+#packages,
+#facilities,
+#venue,
+#gallery,
+#enquiry {
+  scroll-margin-top: 90px;
+}
+
 h1, h2, h3 {
   font-family: var(--font-display);
   color: var(--charcoal);
@@ -43,12 +52,12 @@ h1, h2, h3 {
 .nav-brand {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 2.1rem;
-  color: var(--marigold);
-  text-shadow: 0 0 10px rgba(255, 159, 28, 0.55), 0 0 26px rgba(255, 159, 28, 0.35);
+  font-size: 2.9rem;
+  color: var(--marigold-deep);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.08), 0 0 14px rgba(255, 107, 0, 0.5), 0 0 32px rgba(255, 107, 0, 0.3);
   cursor: pointer;
-  line-height: 1.05;
-  letter-spacing: 0.01em;
+  line-height: 1;
+  letter-spacing: -0.005em;
   display: flex;
   flex-direction: column;
 }
@@ -159,7 +168,7 @@ h1, h2, h3 {
     padding: 14px 20px;
   }
   .nav-brand {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
   }
   .nav-brand-tagline {
     font-size: 0.5rem;
@@ -856,5 +865,32 @@ h1, h2, h3 {
   }
   .hero-actions a {
     flex: 1 1 auto;
+  }
+}
+
+/* ---------- Package Poster ---------- */
+.poster-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 90px 32px;
+}
+
+.poster-frame {
+  display: flex;
+  justify-content: center;
+}
+
+.poster-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px -20px rgba(110, 30, 46, 0.35);
+  border: 1px solid rgba(198, 161, 91, 0.4);
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .poster-section {
+    padding: 60px 20px;
   }
 }
