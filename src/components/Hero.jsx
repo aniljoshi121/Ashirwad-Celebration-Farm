@@ -27,10 +27,6 @@ export default function Hero() {
           </Tilt>
         </motion.div>
 
-        <motion.span variants={item} className="eyebrow eyebrow-light">
-          Laxmipur · Dehradun
-        </motion.span>
-
         <motion.h1 variants={item}>
           Where Memories Are
           <br />
