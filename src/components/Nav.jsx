@@ -23,7 +23,7 @@ export default function Nav() {
     >
       <div className="nav-inner">
         <a href="#top" className="nav-brand">
-          Ashirwad <span>Celebration Farm</span>
+          Ashirwad <span>Celebration Farm · by Himalayan Swimming Pool</span>
         </a>
 
         <nav className="nav-links">
