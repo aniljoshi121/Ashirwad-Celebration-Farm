@@ -166,17 +166,24 @@ h1, h2, h3 {
 @media (max-width: 480px) {
   .nav-inner {
     padding: 14px 20px;
+    align-items: flex-start;
   }
   .nav-brand {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
   .nav-brand-tagline {
-    font-size: 0.5rem;
-    letter-spacing: 0.06em;
+    font-size: 0.48rem;
+    letter-spacing: 0.05em;
   }
-  .nav-brand-sub,
+  .nav-brand-sub {
+    font-size: 0.6rem;
+  }
   .nav-brand-address {
-    display: none;
+    font-size: 0.56rem;
+    max-width: 100%;
+  }
+  .nav-toggle {
+    margin-top: 4px;
   }
 }
 
