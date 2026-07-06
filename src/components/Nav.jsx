@@ -40,8 +40,7 @@ export default function Nav() {
     >
       <div className="nav-inner">
         <a href="#top" className="nav-brand">
-          Ashirwad
-          <span className="nav-brand-tagline">Celebration Farm</span>
+          Ashirwad Celebration Farm
           <span className="nav-brand-sub">Himalayan Swimming Pool</span>
           <span className="nav-brand-address">
             Laxmipur, opp. Tea Garden, Premnagar, Dehradun, Uttarakhand
