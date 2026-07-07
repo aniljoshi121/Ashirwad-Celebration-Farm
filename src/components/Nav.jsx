@@ -41,7 +41,7 @@ export default function Nav() {
       <div className="nav-inner">
         <a href="#top" className="nav-brand">
           Ashirwad Celebration Farm
-          <span className="nav-brand-sub">Himalayan Swimming Pool Compound</span>
+          <span className="nav-brand-sub">(Himalayan Swimming Pool Compound)</span>
           <span className="nav-brand-address">
             Laxmipur, opp. Tea Garden, Premnagar, Dehradun, Uttarakhand
           </span>
